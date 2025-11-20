@@ -15,5 +15,5 @@ Personer som vill ha växter men inte har kunskap om den.
 
 Användningen av vår lösning är oftast i hemmet, på en telefon, utan stress.
 
-## Tema 
+
 
