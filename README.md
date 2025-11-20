@@ -14,5 +14,5 @@ En fuktsensor för att mäta fuktnivån i blomkrukor som hjälper användare med
 
 Användningen av vår lösning är oftast i jordbruk och växthus, eller i hemmet, på en telefon, utan stress.
 
-
+![Kruka](bilder/kruka.jpg)
 
