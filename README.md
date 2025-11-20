@@ -1,5 +1,4 @@
 # Grupp 5
-hej hej
 
 ## Introduktion
 
