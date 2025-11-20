@@ -25,4 +25,3 @@ En progress bar för en enskild kruka för att se fuktnivån för tillfället oc
 Fuktionen som visar notiser när det är dags att vattna växterna.
 
 ![Kruka](bilder/kruka.jpg) 
-simon
