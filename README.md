@@ -20,6 +20,5 @@ Användningen av vår lösning är oftast i hemmet nära växten, på en telefon
 
 En progress bar för en enskild kruka för att se fuktnivån för tillfället och ett diagram för att se trender för fukten genom tid.
 
-![Kruka](bilder/kruka.jpg)
-
-
+![Kruka](bilder/kruka.jpg) 
+simon
