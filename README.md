@@ -7,6 +7,9 @@ En fuktsensor för att mäta fuktnivån i blomkrukor som hjälper användare med
 ## Användare
 
 Vuxna männsikor som har problem att komma ihåg att vattna sina blommor
+Vuxna människor som har växter, hemma, på jobbet, eller på fritidshus.
+Säljare på växtbutiker.
+Personer som vill ha växter men inte har kunskap om den.
 
 ## Kontext
 
