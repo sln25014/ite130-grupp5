@@ -9,6 +9,7 @@
 
 * Bygga ihop sensor och mikroprocessor
 * Skriva kod i arduino
-* Designa låda för komponenter och 3D printa
+* Skapa kommunikationen mellan sensorer, databas och webui
 * Designa grafiken
 * Skapa det grafiska
+* Designa låda för komponenter och 3D printa
