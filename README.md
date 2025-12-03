@@ -23,9 +23,13 @@ En progress bar för en enskild kruka för att se fuktnivån för tillfället oc
 <img width="458" height="286" alt="Skärmavbild 2025-12-03 kl  15 16 22" src="https://github.com/user-attachments/assets/a965d78b-4787-4afa-89ab-312de426465f" />
 
 ## Beskrivning av system
-
+Systemet består av tre delar: Sensor, Mikrokontroller - Plusivokit, Webb gränssnitt
 * MQTT
-* Arduino
+* Arduino (ESP8266 library)
+* HTML
+* CSS
+* Chart.js
+
 
 ## Sensor 
 
