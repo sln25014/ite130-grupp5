@@ -20,12 +20,16 @@ Användningen av vår lösning är oftast i hemmet nära växten, på en telefon
 
 En progress bar för en enskild kruka för att se fuktnivån för tillfället och ett diagram för att se trender för fukten genom tid.
 
-## Krav 
-
-* Fuktionen som visar notiser när det är dags att vattna växterna.
-* Fina färger
-
-
-
 <img width="458" height="286" alt="Skärmavbild 2025-12-03 kl  15 16 22" src="https://github.com/user-attachments/assets/a965d78b-4787-4afa-89ab-312de426465f" />
 
+## Beskrivning av system
+* MQTT
+* Arduino
+* 
+
+## Sensor 
+Capacitive soil moisture sensor v2.0
+
+
+
+## Förväntat resultat och nytta
