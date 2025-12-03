@@ -24,6 +24,8 @@ En progress bar för en enskild kruka för att se fuktnivån för tillfället oc
 
 ## Beskrivning av system
 Systemet består av tre delar: Sensor, Mikrokontroller - Plusivokit, Webb gränssnitt
+
+De program som används:
 * MQTT
 * Arduino (ESP8266 library)
 * HTML
