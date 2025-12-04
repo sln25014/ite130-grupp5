@@ -1,12 +1,17 @@
 #include <ArduinoMqttClient.h>
 #include <ESP8266WiFi.h>
+#include <NTPClient.h>
+#include <WiFiUdp.h>
 
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP);
 
 const char broker[] = "test.mosquitto.org";
 int port = 1883;
 const char topicM[] = "/MDU/ITE130/Group5/Moisture";
+const char topicT[] = "/MDU/ITE130/Group5/Time";
 
 //set interval for sending messages (milliseconds)
 const long interval = 8000;
@@ -23,6 +28,8 @@ void setup() {
 
   // Change **** to SSID and password of WiFi
   WiFi.begin("MDU_guest", "Frozen202512");
+
+  timeClient.begin();
 
   Serial.print("Connecting");
   while (WiFi.status() != WL_CONNECTED) {
@@ -55,6 +62,8 @@ void loop() {
   // avoids being disconnected by the broker
   mqttClient.poll();
 
+  timeClient.update();
+
   unsigned long currentMillis = millis();
 
   if (currentMillis - previousMillis >= interval) {
@@ -72,6 +81,10 @@ void loop() {
     // send message in moisture topic with the value of the sensor
     mqttClient.beginMessage(topicM);
     mqttClient.print(value);
+    mqttClient.endMessage();
+
+    mqttClient.beginMessage(topicT);
+    mqttClient.print(timeClient.getFormattedTime());
     mqttClient.endMessage();
 
     Serial.println();
