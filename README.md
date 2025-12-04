@@ -43,7 +43,7 @@ Vi använder Capacitive soil moisture sensor v2.0
 * Gör klart presentation för den 12/12
   
 #### Vecka 2 
-* Påbörja skiss och kod för hemsid, (detta fortsätter vi med vecka 3 också).
+* Påbörja skiss och kod för hemsida, (detta fortsätter vi med vecka 3 också).
 * Börja överföringen från Arduino till webbsidan.
 * Testa! Fungerar det? Fungerar det inte? Finns det något som kan förbättras?
 * Förbered inför presentation den 12/12
