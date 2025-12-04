@@ -52,11 +52,11 @@ Vi använder Capacitive soil moisture sensor v2.0
 * Gör klart projektet och påbörja presentationen för slutredovisning.
 * Gå igenom allting en sista gång.
 * Om tid finns: skapa en förvaringslåda/box för komponenterna.
-* Slutredovisning 18/12!!
+* Slutredovisning 18/12! 😄
 
 ## Förväntat resultat och nytta
 
 * Ett fungerande mätningssystem som visar jordfuktighet i realtid på en fungerande webbplats
 * Att hjälpa användare få kunskap om när jorden behöver vattnas
-* Fler växter överlever!! 😃
+* Fler växter överlever!! 🥰
 
