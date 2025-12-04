@@ -1,7 +1,5 @@
 #include <ArduinoMqttClient.h>
 #include <ESP8266WiFi.h>
-//#include <NTPClient.h>
-//#include <WiFiUdp.h>
 
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
@@ -9,7 +7,6 @@ MqttClient mqttClient(wifiClient);
 const char broker[] = "test.mosquitto.org";
 int port = 1883;
 const char topicM[] = "/MDU/ITE130/Group5/Moisture";
-//const char topicT[] = "/MDU/ITE130/Group5/Time";
 
 //set interval for sending messages (milliseconds)
 const long interval = 8000;
@@ -17,8 +14,6 @@ unsigned long previousMillis = 0;
 
 int count = 0;
 
-//WiFiUDP ntpUDP;
-//NTPClient timeClient(ntpUDP, "pool.ntp.org");
 
 void setup() {
 
@@ -27,7 +22,7 @@ void setup() {
   Serial.println();
 
   // Change **** to SSID and password of WiFi
-  WiFi.begin("Tonfisk", "Nyfors1409");
+  WiFi.begin("MDU_guest", "Frozen202512");
 
   Serial.print("Connecting");
   while (WiFi.status() != WL_CONNECTED) {
@@ -53,20 +48,12 @@ void setup() {
   Serial.println("You're connected to the MQTT broker!");
   Serial.println();
 
-  //Serial.println("Initializing the NTP client");
-  //Serial.println();
-
-  // Offset the time for GMT+1 timezone
-  //timeClient.setTimeOffset(3600);
 }
 
 void loop() {
   // call poll() regularly to allow the library to send MQTT keep alive which
   // avoids being disconnected by the broker
   mqttClient.poll();
-
-  // Get the time from the NTP server
-  //timeClient.update();
 
   unsigned long currentMillis = millis();
 
@@ -77,28 +64,15 @@ void loop() {
     //record value from A0
     int value = analogRead(A0);
 
-    // Set the time variable to the current time in a string with the format HH:MM:SS
-    //String time = timeClient.getFormattedTime();
-
     // Print the the moisture topic in serial monitor
     Serial.print("Sending message to topic: ");
     Serial.println(topicM);
     Serial.println(value);
 
-    // Print the the time topic in serial monitor
-    //Serial.print("Sending message to topic: ");
-    //Serial.println(topicT);
-    //Serial.println(time);
-
     // send message in moisture topic with the value of the sensor
     mqttClient.beginMessage(topicM);
     mqttClient.print(value);
     mqttClient.endMessage();
-
-    // send message in time topic with formatted time from NTP
-    //mqttClient.beginMessage(topicT);
-    //mqttClient.print(time);
-    //mqttClient.endMessage();
 
     Serial.println();
   }
