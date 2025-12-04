@@ -22,7 +22,7 @@ Ett diagram för att se trender för fukten genom tid.
 <img width="458" height="286" alt="Skärmavbild 2025-12-03 kl  15 16 22" src="https://github.com/user-attachments/assets/a965d78b-4787-4afa-89ab-312de426465f" />
 
 ## Beskrivning av system
-Systemet består av tre delar: Sensor, Mikrokontroller - Plusivokit, Webb gränssnitt
+Systemet består av tre delar: Sensor, Universiell mikrokontroller, Webb gränssnitt
 
 De program som används:
 * MQTT
@@ -39,5 +39,5 @@ Vi använder Capacitive soil moisture sensor v2.0
 
 * Ett fungerande mätningssystem som visar jordfuktighet i realtid på en fungerande webbplats
 * Att hjälpa användare få kunskap om när jorden behöver vattnas
-* Fler växter överlever!! :)
+* Fler växter överlever!! 😃
 
