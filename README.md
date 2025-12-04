@@ -35,6 +35,25 @@ De program som används:
 
 Vi använder Capacitive soil moisture sensor v2.0
 
+## Tidsplan
+
+#### Vecka 1
+* Gör en tidsplan för vårat arbete samt en plan för sensorn och microkontrollern.
+* Gör koden för sensorn och testa för att se om det fungerar.
+* Gör klart presentation för den 12/12
+  
+#### Vecka 2 
+* Påbörja skiss och kod för hemsid, (detta fortsätter vi med vecka 3 också).
+* Börja överföringen från Arduino till webbsidan.
+* Testa! Fungerar det? Fungerar det inte? Finns det något som kan förbättras?
+* Förbered inför presentation den 12/12
+  
+#### Vecka 3
+* Gör klart projektet och påbörja presentationen för slutredovisning.
+* Gå igenom allting en sista gång.
+* Om tid finns: skapa en förvaringslåda/box för komponenterna.
+* Slutredovisning 18/12!!
+
 ## Förväntat resultat och nytta
 
 * Ett fungerande mätningssystem som visar jordfuktighet i realtid på en fungerande webbplats
