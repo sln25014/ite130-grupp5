@@ -40,7 +40,7 @@ Vi använder Capacitive soil moisture sensor v2.0
 #### Vecka 1
 * Gör en tidsplan för vårat arbete samt en plan för sensorn och microkontrollern.
 * Gör koden för sensorn och testa för att se om det fungerar.
-* Gör klart presentation för den 12/12
+* Gör klart presentation för den 5/12
   
 #### Vecka 2 
 * Påbörja skiss och kod för hemsida, (detta fortsätter vi med vecka 3 också).
