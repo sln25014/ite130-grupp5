@@ -3,8 +3,6 @@
 ## Introduktion
 En fuktsensor för att mäta fuktnivån i blomkrukor som hjälper användare med när de ska vattnas, och för att avgöra om jorden är torr, lagom fuktig eller vattenmättad.
 
-Det kan även vara bra att mäta temperatur eftersom den kan påverka fuktnivån i jorden.
-
 ## Användare
 
 * Personer som har växter, hemma, på jobbet, eller i sina fritidshus.
