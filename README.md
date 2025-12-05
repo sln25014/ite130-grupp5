@@ -17,9 +17,11 @@ Användningen av vår lösning är oftast i hemmet nära växten, på en telefon
 
 ## Visualisering
 
-Ett diagram för att se trender för fukten genom tid.
+Ett linechart för att se trender för fukten genom tid som på bilden.
 
 <img width="458" height="286" alt="Skärmavbild 2025-12-03 kl  15 16 22" src="https://github.com/user-attachments/assets/a965d78b-4787-4afa-89ab-312de426465f" />
+
+Även någon form av progress bar eller mätare för att se en livestatus för fuktnivån.
 
 ## Beskrivning av system
 Systemet består av tre delar: Sensor, Universiell mikrokontroller, Webb gränssnitt
