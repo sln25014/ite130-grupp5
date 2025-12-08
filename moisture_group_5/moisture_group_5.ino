@@ -54,7 +54,6 @@ void setup() {
 
   Serial.println("You're connected to the MQTT broker!");
   Serial.println();
-
 }
 
 void loop() {
