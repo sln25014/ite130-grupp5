@@ -36,7 +36,7 @@
         "z": "733b845c34b41557",
         "name": "",
         "group": "68cdba3a650a81d9",
-        "order": 0,
+        "order": 2,
         "width": 0,
         "height": 0,
         "gtype": "gage",
@@ -62,7 +62,7 @@
         "id": "77b309ca04640480",
         "type": "function",
         "z": "733b845c34b41557",
-        "name": "function 1",
+        "name": "Fuktnivå till prompt",
         "func": "if (msg.payload <= 350)\nmsg.payload = \"Vattna inte mer\"\n\nelse if (msg.payload > 350 && msg.payload <= 600)\nmsg.payload = \"Lagom\"\n\nelse \nmsg.payload = \"Vattna mig\"\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -70,7 +70,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
+        "x": 550,
         "y": 80,
         "wires": [
             [
@@ -84,7 +84,7 @@
         "z": "733b845c34b41557",
         "name": "",
         "group": "68cdba3a650a81d9",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "",
@@ -127,7 +127,7 @@
         "type": "ui_text",
         "z": "733b845c34b41557",
         "group": "68cdba3a650a81d9",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -139,8 +139,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 690,
-        "y": 100,
+        "x": 730,
+        "y": 120,
         "wires": []
     },
     {
@@ -177,7 +177,7 @@
     {
         "id": "68cdba3a650a81d9",
         "type": "ui_group",
-        "name": "Default",
+        "name": "",
         "tab": "b59f3276fa92b60d",
         "order": 1,
         "disp": true,
@@ -194,7 +194,7 @@
         "hidden": false
     },
     {
-        "id": "eedc1f34eb1098dc",
+        "id": "daf3ee4bb619d18a",
         "type": "global-config",
         "env": [],
         "modules": {
