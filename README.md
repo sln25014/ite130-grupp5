@@ -9,12 +9,7 @@ Nybörjare som sköter krukväxter inomhus.
 Dessa användare har några få växter hemma, saknar djup kunskap om växtskötsel och känner ofta osäkerhet kring när de ska vattna.
 De vill ha en enkel och pålitlig lösning som ger tydliga besked utan teknisk komplexitet.
 
-* ~~Personer som har växter, hemma, på jobbet, eller i sina fritidshus.~~
-* ~~Säljare i växtbutiker med växthus.~~
-* ~~Personer som vill ha växter men inte har kunskap om dem.~~
-
 ## Kontext
-
 Användningen av vår lösning är oftast i hemmet nära växten, via mobilen, i lugna och vardagliga situationer.
 
 ## Visualisering
