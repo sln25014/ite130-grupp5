@@ -1,9 +1,10 @@
 # Chart.js
 
-Chart.js är ett lätt JavaScript-bibliotek som gör det enkelt att skapa på webbsida. 
+Chart.js är ett lätt JavaScript-bibliotek som används för att skapa interaktiva och responsiva datavisualiseringar på webben.Det kan skapar många olika typer och grafer och diagram.
 
 ### Vad behöver man?
 * Canvas-element
 * CDN-länk
 * JS-kod
+
 
