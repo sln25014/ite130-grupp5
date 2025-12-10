@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Chart.js example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
+</head>
+
+<body>
+    <div style="width: 300px; display: inline-block; vertical-align: top; margin-right: 20px;">
+        <canvas id="moisture-gauge" width="300" height="300"></canvas>
+        <div id="moisture-instruction"
+            style="text-align:center; font-size: 1.2em; margin-top: 10px; font-weight: normal;"></div>
+    </div>
+    <div style="width: 800px; display: inline-block; vertical-align: top;">
+        <canvas id="acquisitions"></canvas>
+    </div>
+
+    <script type="module" src="acquisitions.js"></script>
+</body>
+
+</html>
