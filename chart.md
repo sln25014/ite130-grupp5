@@ -1,6 +1,6 @@
 # Chart.js
 
-Chart.js är ett lätt JavaScript-bibliotek som används för att skapa interaktiva och responsiva datavisualiseringar på webben.Det kan skapar många olika typer och grafer och diagram.
+Chart.js är ett lätt JavaScript-bibliotek som används för att skapa interaktiva och responsiva datavisualiseringar på webben. Det kan skapar många olika typer och grafer och diagram.
 
 ### Vad behöver man?
 * Canvas-element
@@ -61,6 +61,7 @@ const chart = new Chart(ctxLine, {
 ## Resultat 
 
 <img width="855" height="447" alt="Screenshot 2025-12-10 at 18 57 37" src="https://github.com/user-attachments/assets/1233cf86-054a-4bf2-83f7-5322c998821b" />
+
 
 
 
