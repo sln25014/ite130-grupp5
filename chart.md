@@ -7,4 +7,12 @@ Chart.js är ett lätt JavaScript-bibliotek som används för att skapa interakt
 * CDN-länk
 * JS-kod
 
+## Tutorial på hur man skapa graf
+
+### Steg 1 - Canvas(HTML)
+```js
+<canvas id="myChart"></canvas>
+```
+
+
 
