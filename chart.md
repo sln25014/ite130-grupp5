@@ -23,6 +23,43 @@ Detta ligger också i HTML:
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 ```
 
+### Steg 3 - Gauge chart (JavaScript)
+Detta är ett JavaScript-koden och ska ligga i acquisition.js
+
+```js
+
+const ctxLine = document.getElementById('acquisitions').getContext('2d');
+const chart = new Chart(ctxLine, {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Moisture %',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+        }]
+    },
+    options: {
+        responsive: true,
+        animation: false,
+        scales: {
+            x: { title: { display: true, text: 'Time' } },
+            y: {
+                min: 0,
+                max: 100,
+                title: { display: true, text: 'Moisture %' },
+                ticks: {
+                    callback: value => value + '%'
+                }
+            }
+        }
+    }
+});
+```
+
+
 
 
 
