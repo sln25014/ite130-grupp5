@@ -1,11 +1,4 @@
-import Chart from 'chart.js/auto';
-
-// MQTT will be loaded from CDN script tag in HTML
-
-// ============================================================
 // DATA STRUCTURES
-// ============================================================
-
 class MoistureReading {
     constructor(value, timestamp = new Date(), sensorId = 'default') {
         this.value = value;
@@ -30,7 +23,7 @@ class SensorConfig {
 }
 
 class TimeSeriesBuffer {
-    constructor(maxSize = 100) {
+    constructor(maxSize = 50) {
         this.readings = [];
         this.maxSize = maxSize;
     }
@@ -55,11 +48,10 @@ class TimeSeriesBuffer {
     }
 
     valueToPercent(value) {
-        // 200 = 100% (most wet), 700 = 0% (most dry)
         const wetValue = 200;
         const dryValue = 700;
         const percent = ((dryValue - value) / (dryValue - wetValue)) * 100;
-        return Math.max(0, Math.min(100, percent)); // Clamp between 0-100
+        return Math.max(0, Math.min(100, percent));
     }
 
     getStats() {
@@ -91,7 +83,7 @@ class DashboardState {
         this.sensors = new Map();
         this.timeSeries = new Map();
         this.alerts = [];
-        this.maxAlerts = 50;
+        this.maxAlerts = 10;
     }
 
     addSensor(sensorId) {
@@ -146,9 +138,7 @@ class DashboardState {
     }
 }
 
-// ============================================================
-// INITIALIZE DASHBOARD
-// ============================================================
+// INITIALIZE
 const dashboard = new DashboardState();
 const sensorId = 'Group5-Moisture';
 
@@ -156,13 +146,11 @@ dashboard.addSensor(sensorId);
 const sensorConfig = dashboard.sensors.get(sensorId);
 sensorConfig.displayName = 'Plant Moisture Sensor';
 sensorConfig.thresholds = {
-    min: 350,    // Below = too wet
-    max: 600     // Above = too dry
+    min: 350,
+    max: 600
 };
 
-// ============================================================
 // CHART SETUP
-// ============================================================
 const chart = new Chart(
     document.getElementById('acquisitions'),
     {
@@ -172,34 +160,42 @@ const chart = new Chart(
             datasets: [{
                 label: 'Moisture %',
                 data: [],
-                fill: false,
+                fill: true,
+                backgroundColor: 'rgba(75, 192, 192, 0.1)',
                 borderColor: 'rgb(75, 192, 192)',
-                tension: 0.1
+                tension: 0.4,
+                pointRadius: 3,
+                pointHoverRadius: 5
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             animation: false,
             scales: {
-                x: { title: { display: true, text: 'Time' } },
+                x: {
+                    title: { display: false },
+                    ticks: { maxTicksLimit: 6 }
+                },
                 y: {
                     min: 0,
                     max: 100,
-                    title: { display: true, text: 'Moisture %' },
+                    title: { display: false },
                     ticks: {
                         callback: function (value) {
                             return value + '%';
                         }
                     }
                 }
+            },
+            plugins: {
+                legend: { display: false }
             }
         }
     }
 );
 
-// ============================================================
 // GAUGE SETUP
-// ============================================================
 const gaugeMax = 1000;
 const gaugeChart = new Chart(
     document.getElementById('moisture-gauge').getContext('2d'),
@@ -214,7 +210,7 @@ const gaugeChart = new Chart(
             }]
         },
         options: {
-            responsive: false,
+            responsive: true,
             maintainAspectRatio: true,
             rotation: -90,
             circumference: 180,
@@ -244,12 +240,13 @@ function updateGauge(value, status) {
     gaugeChart.data.datasets[0].data[1] = gaugeMax - clamped;
     gaugeChart.update('none');
 
+    document.getElementById('gauge-value-number').textContent = value;
+    document.getElementById('gauge-value-number').style.color = color;
+
     const instructionEl = document.getElementById('moisture-instruction');
-    if (instructionEl) {
-        instructionEl.textContent = instruction;
-        instructionEl.style.color = color;
-        instructionEl.style.fontWeight = status === 'too-dry' ? 'bold' : 'normal';
-    }
+    instructionEl.textContent = instruction;
+    instructionEl.style.color = color;
+    instructionEl.style.background = status === 'too-dry' ? '#fef2f2' : (status === 'too-wet' ? '#fffbeb' : '#f0fdf4');
 }
 
 function updateChart() {
@@ -259,15 +256,26 @@ function updateChart() {
     chart.update();
 }
 
-// ============================================================
+function updateStats() {
+    const stats = dashboard.getSensorData(sensorId).stats;
+    if (stats) {
+        document.getElementById('stat-current').textContent = stats.latest;
+        document.getElementById('stat-avg').textContent = Math.round(stats.avg);
+        document.getElementById('stat-min').textContent = stats.min;
+        document.getElementById('stat-max').textContent = stats.max;
+    }
+}
+
 // MQTT CONNECTION
-// ============================================================
 const brokerUrl = 'wss://test.mosquitto.org:8081';
 const topic = '/MDU/ITE130/Group5/Moisture';
 const client = mqtt.connect(brokerUrl);
 
 client.on('connect', function () {
     console.log('Connected to MQTT broker');
+    document.getElementById('connection-status').textContent = 'Connected';
+    document.getElementById('connection-status').className = 'status-badge status-connected';
+
     client.subscribe(topic, function (err) {
         if (!err) {
             console.log('Subscribed to', topic);
@@ -286,29 +294,19 @@ client.on('message', function (topic, message) {
 
         updateGauge(value, status);
         updateChart();
-
-        const activeAlerts = dashboard.getActiveAlerts();
-        if (activeAlerts.length > 0) {
-            console.warn(`Alert: ${activeAlerts[0].message}`);
-        }
-
-        const stats = dashboard.getSensorData(sensorId).stats;
-        if (stats && stats.count % 10 === 0) {
-            console.log('Stats:', {
-                min: stats.min.toFixed(0),
-                max: stats.max.toFixed(0),
-                avg: stats.avg.toFixed(0),
-                latest: stats.latest
-            });
-        }
+        updateStats();
     }
 });
 
 client.on('error', function (error) {
     console.error('MQTT error:', error);
+    document.getElementById('connection-status').textContent = 'Disconnected';
+    document.getElementById('connection-status').className = 'status-badge status-disconnected';
 });
 
-// ============================================================
-// DEBUGGING
-// ============================================================
+client.on('close', function () {
+    document.getElementById('connection-status').textContent = 'Disconnected';
+    document.getElementById('connection-status').className = 'status-badge status-disconnected';
+});
+
 window.dashboard = dashboard;

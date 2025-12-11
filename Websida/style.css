@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 16px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #667eea;
+    margin-bottom: 8px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status-connected {
+    background: #10b981;
+    color: white;
+}
+
+.status-disconnected {
+    background: #ef4444;
+    color: white;
+}
+
+.gauge-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gauge-container {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 20px;
+}
+
+#moisture-gauge {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.gauge-value {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.gauge-value-number {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.gauge-value-label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.moisture-instruction {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 12px;
+    background: #f3f4f6;
+    margin-top: 16px;
+}
+
+.chart-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #667eea;
+}
+
+.chart-container {
+    position: relative;
+    height: 250px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.stat-item {
+    background: #f3f4f6;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}

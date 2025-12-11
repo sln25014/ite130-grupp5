@@ -2,18 +2,59 @@
 <html lang="en">
 
 <head>
-    <title>Chart.js example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Plant Moisture Monitor</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 </head>
 
 <body>
-    <div style="width: 300px; display: inline-block; vertical-align: top; margin-right: 20px;">
-        <canvas id="moisture-gauge" width="300" height="300"></canvas>
-        <div id="moisture-instruction"
-            style="text-align:center; font-size: 1.2em; margin-top: 10px; font-weight: normal;"></div>
-    </div>
-    <div style="width: 800px; display: inline-block; vertical-align: top;">
-        <canvas id="acquisitions"></canvas>
+    <div class="container">
+        <div class="header">
+            <h1>🌱 Plant Moisture Monitor</h1>
+            <span id="connection-status" class="status-badge status-disconnected">Connecting...</span>
+        </div>
+
+        <div class="gauge-card">
+            <div class="gauge-container">
+                <canvas id="moisture-gauge"></canvas>
+                <div class="gauge-value">
+                    <div id="gauge-value-number" class="gauge-value-number">--</div>
+                    <div class="gauge-value-label">RAW VALUE</div>
+                </div>
+            </div>
+            <div id="moisture-instruction" class="moisture-instruction">
+                Waiting for data...
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h2>📊 Moisture History</h2>
+            <div class="chart-container">
+                <canvas id="acquisitions"></canvas>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Current</div>
+                    <div id="stat-current" class="stat-value">--</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Average</div>
+                    <div id="stat-avg" class="stat-value">--</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Min</div>
+                    <div id="stat-min" class="stat-value">--</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Max</div>
+                    <div id="stat-max" class="stat-value">--</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script type="module" src="acquisitions.js"></script>
