@@ -3,9 +3,9 @@
 Chart.js är ett lätt JavaScript-bibliotek som används för att skapa interaktiva och responsiva datavisualiseringar på webben. Det kan skapar många olika typer och grafer och diagram.
 
 ### Vad behöver man?
-* Canvas-element
-* CDN-länk
-* JS-kod
+* Canvas-element som själva diagramet ritas på
+* CDN-länk i HTML
+* JS-kod som skapar chart-objektet
 
 ## Tutorial på hur man skapa graf
 
@@ -61,6 +61,7 @@ const chart = new Chart(ctxLine, {
 ## Resultat 
 
 <img width="855" height="447" alt="Screenshot 2025-12-10 at 18 57 37" src="https://github.com/user-attachments/assets/1233cf86-054a-4bf2-83f7-5322c998821b" />
+
 
 
 
