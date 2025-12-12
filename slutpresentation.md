@@ -18,6 +18,7 @@ För att bygga ihop sennsorn har det använts ett Plusivo-kit och dessa komponen
 Eftersom att användningen av sensorn främst skulle ske på telefon valde vi att prioritera en mobilvänlig lösning. Information och värden skickas till en webbsida som är tillämpad för mobilen vilket gör det enklare för användaren att snabbt få fram värden i realtid samt rekommendationen (ex. växten behöver vattnas).
 
 ## Kunskap 
+Tiden det tar för jorden att torka ut 
 
 ## Delar som används i Koden
 
