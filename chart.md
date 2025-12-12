@@ -36,7 +36,7 @@ En chart Kräver:
 
 -datasets (värden). De värden som faktiskt syns i diagrammet.
 
--typ (ex."line"). 
+-typ (ex."line" som ritar upp ett linjediagram). 
 
 ```js
 
@@ -79,6 +79,7 @@ const chart = new Chart(ctxLine, {
 - live-data från MQTT-sensorn
 - En linje som visar fuktnivån över tid
 - möjligheten finns att lägga till fler kurvor 
+
 
 
 
