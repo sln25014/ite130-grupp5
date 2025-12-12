@@ -26,6 +26,16 @@ Detta ligger också i HTML:
 ### Steg 3 - Skapar graf (JavaScript)
 Detta är ett JavaScript-koden och ska ligga i acquisition.js
 
+### Grundstruktur att skapa ett diagram
+
+En chart Kräver:
+
+-labels (x-axeln)
+
+-datasets (värden)
+
+-typ (ex."line")
+
 ```js
 
 const ctxLine = document.getElementById('acquisitions').getContext('2d');
@@ -61,6 +71,7 @@ const chart = new Chart(ctxLine, {
 ## Resultat 
 
 <img width="855" height="447" alt="Screenshot 2025-12-10 at 18 57 37" src="https://github.com/user-attachments/assets/1233cf86-054a-4bf2-83f7-5322c998821b" />
+
 
 
 
