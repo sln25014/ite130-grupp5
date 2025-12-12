@@ -16,7 +16,7 @@ I HTML skapar man detta med ett canvas-element:
 <canvas id="myChart"></canvas>
 ```
 * Canvas fungerar som en tom målarduk där grafen ska ritas upp.
-* id=myChart används av JavaScript för att hitta canvas-elementet.
+* "_id=myChart_" används av JavaScript för att hitta canvas-elementet.
 
 ### Steg 2 - laddar Chart.js (HTML)
 Detta ligger också i HTML:
@@ -80,6 +80,7 @@ const chart = new Chart(ctxLine, {
 - live-data från MQTT-sensorn
 - En linje som visar fuktnivån över tid
 - möjligheten finns att lägga till fler kurvor 
+
 
 
 
