@@ -1,13 +1,15 @@
 ## Slutredovisning ##
 ## användare och kontext 
-Detta projekt går ut på att underlätta intagandet av information om hur ofta en växt behöver vattnas. Detta gäller främst för privatpersoner med växter i hemmet. 
+Detta projekt går ut på att underlätta för privatpersoner som har växter i sitt hem att hålla koll på när växterna behöver vattnas. Genom att mäta jordens fuktighet kan användaren få en bättre förståelse till när det behöver vattnas istället för att förlita sig på gissningar eller känsla. 
 
 ## Plusivo och byggnation av sensor (Bom lista) 
-* Capasative Soil Moisture Sensor v2.0
-* NodeMCU ESP8266
-* 9V Batteri med DC Sladd 
-* Breadboard Power Supply
-* Sladdar i olika färger 
+För att bygga ihop sennsorn har det använts ett Plusivo-kit och dessa komponenter:
+
+* _Capasative Soil Moisture Sensor v2.0_ - Den mäter jordens fuktighet på ett kapacitivt sätt vilket resulterar till en mer noggrannt värde. 
+* _NodeMCU ESP8266_ - En mikrokontroller som ansluter sensorn till internet. 
+* _9V Batteri med DC Sladd_ - Detta behövs för att hålla igång sensorn och mikrokontrollern.
+* _Breadboard Power Supply_ - Används för att på enklare sätt distrubera ström genom prototypen. 
+* _Sladdar i olika färger_ - för att koppla ihop komponenterna
 
 ## Designanpassning mot användare och kontext 
 Eftersom att användningen av vår lösning främst skulle ske på telefon prioriterade vi det. 
