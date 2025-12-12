@@ -23,7 +23,7 @@ Detta ligger också i HTML:
 ```js
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 ```
-En script-tag hämtar Chart.js från en CDN, alltså ett online-bibliotek.
+En script-tag hämtar Chart.js från en CDN, alltså ett online-bibliotek. Det gör så att filer enkelt och snabbt laddas ner vilket underlättar då man inte behöver ladda ner de manuellt. 
 
 ### Steg 3 - Skapar graf (JavaScript)
 Detta är ett JavaScript-koden och ska ligga i acquisition.js
@@ -79,6 +79,7 @@ const chart = new Chart(ctxLine, {
 - live-data från MQTT-sensorn
 - En linje som visar fuktnivån över tid
 - möjligheten finns att lägga till fler kurvor 
+
 
 
 
