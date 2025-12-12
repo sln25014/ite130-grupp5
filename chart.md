@@ -32,11 +32,11 @@ Detta är ett JavaScript-koden och ska ligga i acquisition.js
 
 En chart Kräver:
 
--labels (x-axeln)
+-labels (x-axeln). De beskriver vad varje datapunkt representerar.
 
--datasets (värden)
+-datasets (värden). De värden som faktiskt syns i diagrammet.
 
--typ (ex."line")
+-typ (ex."line"). 
 
 ```js
 
@@ -79,6 +79,7 @@ const chart = new Chart(ctxLine, {
 - live-data från MQTT-sensorn
 - En linje som visar fuktnivån över tid
 - möjligheten finns att lägga till fler kurvor 
+
 
 
 
