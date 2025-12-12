@@ -4,7 +4,7 @@ Chart.js är ett lätt JavaScript-bibliotek som används för att skapa interakt
 
 ### Vad behöver man?
 * Canvas-element som själva diagramet ritas på
-* CDN-länk i HTML
+* CDN-länk (Content Delivery Network) i HTML
 * JS-kod som skapar chart-objektet
 
 ## Tutorial på hur man skapa chart 
@@ -79,6 +79,7 @@ const chart = new Chart(ctxLine, {
 - live-data från MQTT-sensorn
 - En linje som visar fuktnivån över tid
 - möjligheten finns att lägga till fler kurvor 
+
 
 
 
