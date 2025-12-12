@@ -1,5 +1,4 @@
-#Slutredovisning#
-
+## Slutredovisning ##
 ## användare och kontext 
 Detta projekt går ut på att underlätta intagandet av information om hur ofta en växt behöver vattnas. Detta gäller främst för privatpersoner med växter i hemmet. 
 
@@ -11,6 +10,7 @@ Detta projekt går ut på att underlätta intagandet av information om hur ofta 
 * Sladdar i olika färger 
 
 ## Designanpassning mot användare och kontext 
+Eftersom att användningen av vår lösning främst skulle ske på telefon prioriterade vi det. 
 
 ## Kunskap 
 
@@ -23,3 +23,4 @@ Detta projekt går ut på att underlätta intagandet av information om hur ofta 
 4. Test
 
 ## Slutresultat 
+
