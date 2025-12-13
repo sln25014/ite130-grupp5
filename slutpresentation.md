@@ -17,6 +17,7 @@ Användare förlitar sig ofta på gissning eller känsla, vilket kan leda till �
 
 Lösning:
 En LoT-baserad artefakt som mäter jordfuktighet och presenterar informationen visuellt och begripligt i realtid.
+Kurskoppling:  användarcentrerad design, kontextanalys, artefakt i vardagsmiljö
 
 
 ## Plusivo och byggnation av sensor (Bom lista) 
