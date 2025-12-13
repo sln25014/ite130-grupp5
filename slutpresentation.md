@@ -1,4 +1,4 @@
-## Slutredovisning ##
+## Slutredovisning##
 
 ## användare och kontext 
 Detta projekt går ut på att underlätta för privatpersoner som har växter i sitt hem att hålla koll på när växterna behöver vattnas. Genom att mäta jordens fuktighet kan användaren få en bättre förståelse till när det behöver vattnas istället för att förlita sig på gissningar eller känsla. 
