@@ -1,6 +1,14 @@
-## Slutredovisning##
+## Slutredovisning-fuktsensor för jord##
 
 ## användare och kontext 
+Användare:
+Privatpersoner som har krukväxter i hemmet och saknar djup kunskap om växters bevattningsbehov. 
+Kontext: 
+Användning sker i hemmiljö, ofta i vardagen, via mobiltelefon.
+Användaren vill snabbt få svar på:
+* _Om växten behöver vatten
+* -Hur fuktigt jorden är just nu
+  
 Detta projekt går ut på att underlätta för privatpersoner som har växter i sitt hem att hålla koll på när växterna behöver vattnas. Genom att mäta jordens fuktighet kan användaren få en bättre förståelse till när det behöver vattnas istället för att förlita sig på gissningar eller känsla. 
 
 ## Plusivo och byggnation av sensor (Bom lista) 
