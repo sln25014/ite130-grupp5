@@ -8,8 +8,10 @@ Användning sker i hemmiljö, ofta i vardagen, via mobiltelefon.
 Användaren vill snabbt få svar på:
 * Om växten behöver vatten
 * Hur fuktigt jorden är just nu
+
 Problem:
 Användare förlitar sig ofta på gissning eller känsla, vilket kan leda till över-eller undervattning.
+
 Lösning:
 En LoT-baserad artefakt som mäter jordfuktighet och presenterar informationen visuellt och begripligt i realtid.
 
