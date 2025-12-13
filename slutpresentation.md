@@ -2,6 +2,7 @@
 
 ## användare och kontext 
 Användare:
+
 Privatpersoner som har krukväxter i hemmet och saknar djup kunskap om växters bevattningsbehov. 
 Kontext: 
 Användning sker i hemmiljö, ofta i vardagen, via mobiltelefon.
