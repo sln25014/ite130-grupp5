@@ -6,10 +6,13 @@ Privatpersoner som har krukväxter i hemmet och saknar djup kunskap om växters 
 Kontext: 
 Användning sker i hemmiljö, ofta i vardagen, via mobiltelefon.
 Användaren vill snabbt få svar på:
-* _Om växten behöver vatten
-* -Hur fuktigt jorden är just nu
-  
-Detta projekt går ut på att underlätta för privatpersoner som har växter i sitt hem att hålla koll på när växterna behöver vattnas. Genom att mäta jordens fuktighet kan användaren få en bättre förståelse till när det behöver vattnas istället för att förlita sig på gissningar eller känsla. 
+* Om växten behöver vatten
+* Hur fuktigt jorden är just nu
+Problem:
+Användare förlitar sig ofta på gissning eller känsla, vilket kan leda till över-eller undervattning.
+Lösning:
+En LoT-baserad artefakt som mäter jordfuktighet och presenterar informationen visuellt och begripligt i realtid.
+
 
 ## Plusivo och byggnation av sensor (Bom lista) 
 
