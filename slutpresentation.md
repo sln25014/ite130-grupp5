@@ -58,13 +58,24 @@ Kurskoppling: UX, informationsvisualisering, designbeslut utifrån användare
 * Hur ofta en specifik växt behöver vatten
 * Sambandet mellan tid, fuktighet och bevattning
 
-  Detta leder till:
+Detta leder till:
 
  * minskad risk för övervattning
  * mer medveten växtskötsel
  * lärande genom visualiserad data
 
 kurskoppling:data → information → kunskap
+
+## Konstruktion för minskad omgivningspåverkan
+För att göra sensorn mindre känslig för yttre påverkan:
+
+* Sensorn placeras stabilt i jorden, inte löst
+* Elektroniken hålls ovan jord
+* Möjlig enkel kapsling (t.ex.låda) för:
+   * skydd mot vatten
+   * minskad påverkan från beröring och ljus
+
+Kurskoppling: robust konstruktion, fysisk artefakt
 
 ## Delar som används i Koden
 
