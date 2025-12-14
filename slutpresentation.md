@@ -52,8 +52,19 @@ Användaren behöver inte tolka rådata – systemet översätter mätvärden ti
 Kurskoppling: UX, informationsvisualisering, designbeslut utifrån användare
 
 
-## Kunskap 
-Tiden det tar för jorden att torka ut 
+##  Förväntad kunskap hos användaren 
+ Artefakten ger användaren följande kunskap över tid
+* Hur snabbt jorden torkar efter vattning
+* Hur ofta en specifik växt behöver vatten
+* Sambandet mellan tid, fuktighet och bevattning
+
+  Detta leder till:
+
+ * minskad risk för övervattning
+ * mer medveten växtskötsel
+ * lärande genom visualiserad data
+
+kurskoppling:data → information → kunskap
 
 ## Delar som används i Koden
 
