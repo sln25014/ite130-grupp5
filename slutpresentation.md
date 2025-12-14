@@ -88,12 +88,13 @@ Systemets flöde:
    * Text
    * Line chart
 * Webbgränssnitt visar live-data
+  
 Använda tekniker:
 
-* MQTT (publish/subscribe)
-* Node-RED (flödesbaserad programmering)
-* HTML, CSS, JavaScript
-* Chart.js (visualisering)
+  * MQTT (publish/subscribe)
+  * Node-RED (flödesbaserad programmering)
+  * HTML, CSS, JavaScript
+  * Chart.js (visualisering)
 
 
 ## Delar som används i Koden
