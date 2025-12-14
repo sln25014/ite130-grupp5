@@ -16,20 +16,20 @@ Problem:
 Användare förlitar sig ofta på gissning eller känsla, vilket kan leda till över-eller undervattning.
 
 Lösning:
-En LoT-baserad artefakt som mäter jordfuktighet och presenterar informationen visuellt och begripligt i realtid.
+En IoT-baserad artefakt som mäter jordfuktighet och presenterar informationen visuellt och begripligt i realtid.
 
-Kurskoppling:  användarcentrerad design, kontextanalys, artefakt i vardagsmiljö
+Kurskoppling: användarcentrerad design, kontextanalys, artefakt i vardagsmiljö
 
 
 ## Sensor och byggnation (BOM- Bill Of Materials) 
 
 Projektet är byggt på med ett plusivo-kit och följande komponenter:
 
-* _Capasative Soil Moisture Sensor v2.0_ - Den mäter jordens fuktighet på ett kapacitivt sätt vilket resulterar till en mer noggrannt värde. 
+* _Capacative Soil Moisture Sensor v2.0_ - Den mäter jordens fuktighet genom resistansen. 
 * _NodeMCU ESP8266_ - En mikrokontroller som ansluter sensorn till internet som skickarsenordata via MQTT. 
 * _9V Batteri med DC Sladd_ - Detta behövs för att hålla igång sensorn och mikrokontrollern.
-* _Breadboard Power Supply_ - Förenklar strömfördelning under prototypfas. 
-* _Kopplingskablar (jumper wires)_ - Används för anslutning mellan sensor och mikrokontroller.
+* _Breadboard Power Supply_ - Kopplar batteriet till breadboard. 
+* _Kopplingskablar_ - Används för anslutning mellan sensor och mikrokontroller.
 
 Kusrkoppling: mikrokotroller, sensorer, prototypbyggnaden, BOM
 
@@ -52,21 +52,24 @@ Användaren behöver inte tolka rådata – systemet översätter mätvärden ti
 Kurskoppling: UX, informationsvisualisering, designbeslut utifrån användare
 
 
-##  Förväntad kunskap hos användaren 
- Artefakten ger användaren följande kunskap över tid
+##  Förväntad kunskap hos användaren
+
+Artefakten ger användaren följande kunskap över tid:
+
 * Hur snabbt jorden torkar efter vattning
 * Hur ofta en specifik växt behöver vatten
 * Sambandet mellan tid, fuktighet och bevattning
 
 Detta leder till:
 
- * minskad risk för övervattning
- * mer medveten växtskötsel
- * lärande genom visualiserad data
+* minskad risk för övervattning
+* mer medveten växtskötsel
+* lärande genom visualiserad data
 
-kurskoppling:data → information → kunskap
+Kurskoppling:data → information → kunskap
 
 ## Konstruktion för minskad omgivningspåverkan
+
 För att göra sensorn mindre känslig för yttre påverkan:
 
 * Sensorn placeras stabilt i jorden, inte löst
@@ -78,11 +81,12 @@ För att göra sensorn mindre känslig för yttre påverkan:
 Kurskoppling: robust konstruktion, fysisk artefakt
 
 ## Kod och systemarkitektur
+
 Systemets flöde:
 
 * Fuktsensor mäter värde
-* ESP8266 skickar data via MQTT
-* Node-RED tar emot datan
+* ESP8266 lagrar data i variabeln `value` och skickar via en MQTT topic
+* Websida prenumererar på vår topic
 * Data visualiseras med:
    * Gauge
    * Text
@@ -91,10 +95,10 @@ Systemets flöde:
   
 Använda tekniker:
 
-  * MQTT (publish/subscribe)
-  * Node-RED (flödesbaserad programmering)
-  * HTML, CSS, JavaScript
-  * Chart.js (visualisering)
+* MQTT (publish/subscribe)
+* Node-RED (flödesbaserad programmering)
+* HTML, CSS, JavaScript
+* Chart.js (visualisering)
 
 ## Genomförande (steg-för-steg)
 1. Montering av sensor och mikrokontroller
