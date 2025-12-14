@@ -40,9 +40,9 @@ Tydligt designanpassning:
 Eftersom användaren oftats använder mobiltelefon, har vi 
 * Valt moblianpassad webbdesign
 * Visat information med:
-* _Text (”Vattna mig”, ”Lagom”, ”Vattna inte mer”)
-* _Graf (linjediagram)
-* _Visuell indikator (gauge)
+   * Text (”Vattna mig”, ”Lagom”, ”Vattna inte mer”)
+   * Graf (linjediagram)
+   * Visuell indikator (gauge)
 Designen använder lugna gröna färger för att associera till natur och växter.
 Resultat:
 
