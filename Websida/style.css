@@ -24,6 +24,7 @@ body {
     margin-bottom: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative;
 }
 
 .header h1 {
@@ -33,21 +34,53 @@ body {
 }
 
 .status-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: inline-block;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    transition: all 0.3s ease;
+    opacity: 0.8;
 }
 
 .status-connected {
-    background: #10b981;
-    color: white;
+    color: #10b981;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+    animation: pulse-green 2s ease-in-out infinite;
 }
 
 .status-disconnected {
-    background: #ef4444;
-    color: white;
+    color: #ef4444;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+    animation: pulse-red 2s ease-in-out infinite;
+}
+
+/* Subtil pulsanimation för ansluten */
+@keyframes pulse-green {
+    0%, 100% {
+        opacity: 0.8;
+        text-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(16, 185, 129, 1);
+    }
+}
+
+/* Mer uppmärksamhetskrävande pulsanimation för frånkopplad */
+@keyframes pulse-red {
+    0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(239, 68, 68, 1);
+    }
 }
 
 .gauge-card {

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Moist-o-Tron</title>
+    
+    <!-- Stilar och externa bibliotek -->
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
@@ -12,15 +14,21 @@
 
 <body>
     <div class="container">
+        
+        <!-- Header med titel och anslutningsstatus -->
         <div class="header">
             <h1>🌱 Moist-o-Tron</h1>
-            <span id="connection-status" class="status-badge status-disconnected">Ansluter...</span>
+            <span id="connection-status" class="status-badge status-disconnected" aria-label="MQTT-anslutning">●</span>
         </div>
 
+        <!-- Gauge-kort som visar aktuell fuktighetsnivå -->
         <div class="gauge-card">
+            <!-- Instruktionstext som ändras baserat på fuktighetsstatus -->
             <div id="moisture-instruction" class="moisture-instruction">
                 Väntar på data...
             </div>
+            
+            <!-- Halvmånegauge med procentvärde i mitten -->
             <div class="gauge-container">
                 <canvas id="moisture-gauge"></canvas>
                 <div class="gauge-value">
@@ -30,11 +38,16 @@
             </div>
         </div>
 
+        <!-- Kort med linjediagram och statistik -->
         <div class="chart-card">
             <h2>📊 Historik för fukt den senaste veckan</h2>
+            
+            <!-- Container för Chart.js linjediagram -->
             <div class="chart-container">
                 <canvas id="acquisitions"></canvas>
             </div>
+            
+            <!-- Grid med statistikkort (nuvarande, genomsnitt, max, min) -->
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-label">Nuvarande</div>
@@ -57,6 +70,7 @@
 
     </div>
 
+    <!-- Huvudskript som hanterar MQTT, dataprocessering och UI-uppdateringar -->
     <script type="module" src="acquisitions.js"></script>
 </body>
 
