@@ -42,7 +42,8 @@ Eftersom användaren oftats använder mobiltelefon, har vi
 * Visat information med:
    * Text (”Vattna mig”, ”Lagom”, ”Vattna inte mer”)
    * Graf (linjediagram)
-   * Visuell indikator (gauge)
+   * Visuell indikator (gauge)'
+
 Designen använder lugna gröna färger för att associera till natur och växter.
 Resultat:
 
