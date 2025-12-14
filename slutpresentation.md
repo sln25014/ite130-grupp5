@@ -1,6 +1,6 @@
-## Slutredovisning-fuktsensor för jord##
+# Slutredovisning-fuktsensor för jord
 
-## användare och kontext 
+## Användare och kontext 
 Användare:
 
 Privatpersoner som har krukväxter i hemmet och saknar djup kunskap om växters bevattningsbehov. 
@@ -31,7 +31,7 @@ Projektet är byggt på med ett plusivo-kit och följande komponenter:
 * _Breadboard Power Supply_ - Kopplar batteriet till breadboard. 
 * _Kopplingskablar_ - Används för anslutning mellan sensor och mikrokontroller.
 
-Kusrkoppling: mikrokotroller, sensorer, prototypbyggnaden, BOM
+Kurskoppling: mikrokotroller, sensorer, prototypbyggnaden, BOM
 
 ## Designanpassning mot användare och kontext 
 
@@ -62,9 +62,9 @@ Artefakten ger användaren följande kunskap över tid:
 
 Detta leder till:
 
-* minskad risk för övervattning
-* mer medveten växtskötsel
-* lärande genom visualiserad data
+* Minskad risk för övervattning
+* Mer medveten växtskötsel
+* Lärande genom visualiserad data
 
 Kurskoppling:data → information → kunskap
 
@@ -101,6 +101,7 @@ Använda tekniker:
 * Chart.js (visualisering)
 
 ## Genomförande (steg-för-steg)
+
 1. Montering av sensor och mikrokontroller
 2. Programmering av ESP8266 för datainsamling
 3. Konfiguration av MQTT och Node-RED
@@ -108,6 +109,7 @@ Använda tekniker:
 5. Test och justering av gränsvärden
 
 ## Slutresultat
+
 Resultatet är en fungerande IoT-artefakt som:
 * Mäter jordfuktighet i realtid
 * Presenterar data visuellt och begripligt
