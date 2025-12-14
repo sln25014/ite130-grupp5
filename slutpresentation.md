@@ -77,6 +77,25 @@ För att göra sensorn mindre känslig för yttre påverkan:
 
 Kurskoppling: robust konstruktion, fysisk artefakt
 
+## Kod och systemarkitektur
+Systemets flöde:
+
+* Fuktsensor mäter värde
+* ESP8266 skickar data via MQTT
+* Node-RED tar emot datan
+* Data visualiseras med:
+   * Gauge
+   * Text
+   * Line chart
+* Webbgränssnitt visar live-data
+Använda tekniker:
+
+* MQTT (publish/subscribe)
+* Node-RED (flödesbaserad programmering)
+* HTML, CSS, JavaScript
+* Chart.js (visualisering)
+
+
 ## Delar som används i Koden
 
 ## Genomförande 
