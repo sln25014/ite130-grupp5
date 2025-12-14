@@ -96,6 +96,21 @@ Använda tekniker:
   * HTML, CSS, JavaScript
   * Chart.js (visualisering)
 
+## Genomförande (steg-för-steg)
+1. Montering av sensor och mikrokontroller
+2. Programmering av ESP8266 för datainsamling
+3. Konfiguration av MQTT och Node-RED
+4. Utveckling av webbgränssnitt
+5. Test och justering av gränsvärden
+
+## Slutresultat
+Resultatet är en fungerande IoT-artefakt som:
+* Mäter jordfuktighet i realtid
+* presenterar data visuellt och begripligt
+* stödjer användaren i vardagliga beslut
+* är anpassad för mobil användning
+
+
 
 ## Delar som används i Koden
 
