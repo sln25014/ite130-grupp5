@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Plant Moisture Monitor</title>
+    <title>Moist-o-Tron</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
@@ -13,43 +13,43 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌱 Plant Moisture Monitor</h1>
-            <span id="connection-status" class="status-badge status-disconnected">Connecting...</span>
+            <h1>🌱 Moist-o-Tron</h1>
+            <span id="connection-status" class="status-badge status-disconnected">Ansluter...</span>
         </div>
 
         <div class="gauge-card">
+            <div id="moisture-instruction" class="moisture-instruction">
+                Väntar på data...
+            </div>
             <div class="gauge-container">
                 <canvas id="moisture-gauge"></canvas>
                 <div class="gauge-value">
                     <div id="gauge-value-number" class="gauge-value-number">--</div>
-                    <div class="gauge-value-label">RAW VALUE</div>
+                    <div class="gauge-value-label">Fuktnivå</div>
                 </div>
-            </div>
-            <div id="moisture-instruction" class="moisture-instruction">
-                Waiting for data...
             </div>
         </div>
 
         <div class="chart-card">
-            <h2>📊 Moisture History</h2>
+            <h2>📊 Historik för fukt den senaste veckan</h2>
             <div class="chart-container">
                 <canvas id="acquisitions"></canvas>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-label">Current</div>
+                    <div class="stat-label">Nuvarande</div>
                     <div id="stat-current" class="stat-value">--</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">Average</div>
+                    <div class="stat-label">Genomsnitt</div>
                     <div id="stat-avg" class="stat-value">--</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">Min</div>
+                    <div class="stat-label">Maximum</div>
                     <div id="stat-min" class="stat-value">--</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">Max</div>
+                    <div class="stat-label">Minimum</div>
                     <div id="stat-max" class="stat-value">--</div>
                 </div>
             </div>

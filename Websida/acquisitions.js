@@ -111,9 +111,9 @@ class DashboardState {
     createAlert(reading, status) {
         let message = '';
         if (status === 'too-dry') {
-            message = `Soil is too dry (${reading.value}) - plant needs water`;
+            message = `Jorden är för torr (${reading.value}) - vattna växten!`;
         } else if (status === 'too-wet') {
-            message = `Soil is too wet (${reading.value}) - check drainage`;
+            message = `Jorden är för blöt (${reading.value}) - vattna inte mer!`;
         }
 
         const alert = new Alert(reading, 'warning', message);
@@ -196,7 +196,7 @@ const chart = new Chart(
 );
 
 // GAUGE SETUP
-const gaugeMax = 1000;
+const gaugeMax = 100;
 const gaugeChart = new Chart(
     document.getElementById('moisture-gauge').getContext('2d'),
     {
@@ -222,17 +222,19 @@ const gaugeChart = new Chart(
 );
 
 function updateGauge(value, status) {
-    const clamped = Math.max(0, Math.min(gaugeMax, value));
+    const buffer = dashboard.timeSeries.get(sensorId);
+    const percentValue = Math.round(buffer.valueToPercent(value));
+    const clamped = Math.max(0, Math.min(gaugeMax, percentValue));
 
     let color = 'rgb(75, 192, 192)';
-    let instruction = '✅ Moisture level is perfect';
+    let instruction = '✅ Fuktnivån är perfect';
 
     if (status === 'too-dry') {
         color = 'rgba(255, 0, 55, 1)';
-        instruction = '🚨 Soil is too dry - water the plant!';
+        instruction = '🚨 Jorden är för torr - vattna växten!';
     } else if (status === 'too-wet') {
         color = 'rgb(255, 205, 86)';
-        instruction = '⚠️ Soil is too wet - check drainage';
+        instruction = '⚠️ Jorden är för blöt - vattna inte mer!';
     }
 
     gaugeChart.data.datasets[0].backgroundColor[0] = color;
@@ -240,7 +242,7 @@ function updateGauge(value, status) {
     gaugeChart.data.datasets[0].data[1] = gaugeMax - clamped;
     gaugeChart.update('none');
 
-    document.getElementById('gauge-value-number').textContent = value;
+    document.getElementById('gauge-value-number').textContent = percentValue + '%';
     document.getElementById('gauge-value-number').style.color = color;
 
     const instructionEl = document.getElementById('moisture-instruction');
@@ -258,11 +260,12 @@ function updateChart() {
 
 function updateStats() {
     const stats = dashboard.getSensorData(sensorId).stats;
+    const buffer = dashboard.timeSeries.get(sensorId);
     if (stats) {
-        document.getElementById('stat-current').textContent = stats.latest;
-        document.getElementById('stat-avg').textContent = Math.round(stats.avg);
-        document.getElementById('stat-min').textContent = stats.min;
-        document.getElementById('stat-max').textContent = stats.max;
+        document.getElementById('stat-current').textContent = Math.round(buffer.valueToPercent(stats.latest)) + '%';
+        document.getElementById('stat-avg').textContent = Math.round(buffer.valueToPercent(stats.avg)) + '%';
+        document.getElementById('stat-min').textContent = Math.round(buffer.valueToPercent(stats.min)) + '%';
+        document.getElementById('stat-max').textContent = Math.round(buffer.valueToPercent(stats.max)) + '%';
     }
 }
 
@@ -273,7 +276,7 @@ const client = mqtt.connect(brokerUrl);
 
 client.on('connect', function () {
     console.log('Connected to MQTT broker');
-    document.getElementById('connection-status').textContent = 'Connected';
+    document.getElementById('connection-status').textContent = 'Ansluten';
     document.getElementById('connection-status').className = 'status-badge status-connected';
 
     client.subscribe(topic, function (err) {
@@ -300,12 +303,12 @@ client.on('message', function (topic, message) {
 
 client.on('error', function (error) {
     console.error('MQTT error:', error);
-    document.getElementById('connection-status').textContent = 'Disconnected';
+    document.getElementById('connection-status').textContent = 'Inte ansluten';
     document.getElementById('connection-status').className = 'status-badge status-disconnected';
 });
 
 client.on('close', function () {
-    document.getElementById('connection-status').textContent = 'Disconnected';
+    document.getElementById('connection-status').textContent = 'Inte ansluten';
     document.getElementById('connection-status').className = 'status-badge status-disconnected';
 });
 
