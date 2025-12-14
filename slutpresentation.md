@@ -106,9 +106,9 @@ Använda tekniker:
 ## Slutresultat
 Resultatet är en fungerande IoT-artefakt som:
 * Mäter jordfuktighet i realtid
-* presenterar data visuellt och begripligt
-* stödjer användaren i vardagliga beslut
-* är anpassad för mobil användning
+* Presenterar data visuellt och begripligt
+* Stödjer användaren i vardagliga beslut
+* Är anpassad för mobil användning
 
 
 
