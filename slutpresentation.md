@@ -17,22 +17,38 @@ Användare förlitar sig ofta på gissning eller känsla, vilket kan leda till �
 
 Lösning:
 En LoT-baserad artefakt som mäter jordfuktighet och presenterar informationen visuellt och begripligt i realtid.
+
 Kurskoppling:  användarcentrerad design, kontextanalys, artefakt i vardagsmiljö
 
 
-## Plusivo och byggnation av sensor (Bom lista) 
+## Sensor och byggnation (BOM- Bill Of Materials) 
 
-För att bygga ihop sennsorn har det använts ett Plusivo-kit och dessa komponenter:
+Projektet är byggt på med ett plusivo-kit och följande komponenter:
 
 * _Capasative Soil Moisture Sensor v2.0_ - Den mäter jordens fuktighet på ett kapacitivt sätt vilket resulterar till en mer noggrannt värde. 
-* _NodeMCU ESP8266_ - En mikrokontroller som ansluter sensorn till internet. 
+* _NodeMCU ESP8266_ - En mikrokontroller som ansluter sensorn till internet som skickarsenordata via MQTT. 
 * _9V Batteri med DC Sladd_ - Detta behövs för att hålla igång sensorn och mikrokontrollern.
-* _Breadboard Power Supply_ - Används för att på enklare sätt distrubera ström genom prototypen. 
-* _Sladdar i olika färger_ - för att koppla ihop komponenterna
+* _Breadboard Power Supply_ - Förenklar strömfördelning under prototypfas. 
+* _Kopplingskablar (jumper wires)_ - Används för anslutning mellan sensor och mikrokontroller.
+
+Kusrkoppling: mikrokotroller, sensorer, prototypbyggnaden, BOM
 
 ## Designanpassning mot användare och kontext 
 
-Eftersom att användningen av sensorn främst skulle ske på telefon valde vi att prioritera en mobilvänlig lösning. Information och värden skickas till en webbsida som är tillämpad för mobilen vilket gör det enklare för användaren att snabbt få fram värden i realtid samt rekommendationen (ex. växten behöver vattnas).
+Tydligt designanpassning:
+
+Eftersom användaren oftats använder mobiltelefon, har vi 
+* Valt moblianpassad webbdesign
+* Visat information med:
+* _Text (”Vattna mig”, ”Lagom”, ”Vattna inte mer”)
+* _Graf (linjediagram)
+* _Visuell indikator (gauge)
+Designen använder lugna gröna färger för att associera till natur och växter.
+Resultat:
+
+Användaren behöver inte tolka rådata – systemet översätter mätvärden till begriplig information.
+Kurskoppling: UX, informationsvisualisering, designbeslut utifrån användare
+
 
 ## Kunskap 
 Tiden det tar för jorden att torka ut 
