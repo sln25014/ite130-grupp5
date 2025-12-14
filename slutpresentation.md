@@ -48,6 +48,7 @@ Designen använder lugna gröna färger för att associera till natur och växte
 Resultat:
 
 Användaren behöver inte tolka rådata – systemet översätter mätvärden till begriplig information.
+
 Kurskoppling: UX, informationsvisualisering, designbeslut utifrån användare
 
 
