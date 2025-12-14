@@ -88,25 +88,23 @@ Systemets flöde:
 * ESP8266 lagrar data i variabeln `value` och skickar via en MQTT topic
 * Websida prenumererar på vår topic
 * Data visualiseras med:
-   * Gauge
    * Text
+   * Gauge
    * Line chart
-* Webbgränssnitt visar live-data
   
 Använda tekniker:
 
+* C++ (NodeMCU programmering)
 * MQTT (publish/subscribe)
 * Node-RED (flödesbaserad programmering)
-* HTML, CSS, JavaScript
-* Chart.js (visualisering)
+* JavaScript, HTML, CSS 
+* Charts.js
 
 ## Genomförande (steg-för-steg)
 
-1. Montering av sensor och mikrokontroller
-2. Programmering av ESP8266 för datainsamling
-3. Konfiguration av MQTT och Node-RED
-4. Utveckling av webbgränssnitt
-5. Test och justering av gränsvärden
+1. Koppling av sensor och mikrokontroller
+2. Programmering av ESP8266 för datainsamling och MQTT publishing
+3. Utveckling av webgränssnitt med Charts.js, JavaScript, HTML och CSS
 
 ## Slutresultat
 
@@ -115,17 +113,3 @@ Resultatet är en fungerande IoT-artefakt som:
 * Presenterar data visuellt och begripligt
 * Stödjer användaren i vardagliga beslut
 * Är anpassad för mobil användning
-
-
-
-## Delar som används i Koden
-
-## Genomförande 
-
-1. Plusivo
-2. Kod för sensor och få värden
-3. Kod för hemsida
-4. Test
-
-## Slutresultat 
-
