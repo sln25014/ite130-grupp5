@@ -20,9 +20,7 @@ Detta är ett projekt för att mäta fuktnivån i en krukväxt med en sensor. De
 
 ## Bygga
 
-Koppla ihop sensor och mikrokontroller som följande bild:
-
-BILD PÅ SENSOR
+Sätt fast Mikrokontrollern på breadboarden och anslut den orangea sladden från sensorn till pin A0, röd till 3,3 och svart till GND på mikrokontrollern.
 
 ## Arduino IDE setup och Arduino programmering
 
