@@ -18,7 +18,7 @@ En IoT-baserad artefakt som mäter jordfuktighet och presenterar informationen v
 
 _Detta kan kopplas till användarcentrerad design där vi utgår från användarens beteende och behov i deras vardag. Genom kontextanalys kan vi studera användarens situation samt handlingar för att få en bättre förståelse på hur artefakten faktiskt används._
 
-## Sensor och byggnation (BOM- Bill Of Materials) 
+## Bygga prototyp
 
 Projektet är byggt på med ett plusivo-kit som innehåller följande komponenter:
 
