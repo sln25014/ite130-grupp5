@@ -111,3 +111,12 @@ Resultatet är en fungerande IoT-artefakt som:
 * Presenterar data visuellt och begripligt
 * Stödjer användaren i vardagliga beslut
 * Är anpassad för mobil användning
+
+### Websida
+
+![Gauge](/bilder/gauge.png)
+![Line chart](/bilder/lineChart.png)
+
+### Sensor och kruka
+
+![sensor och kruka]()
