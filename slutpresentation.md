@@ -97,7 +97,7 @@ Använda tekniker:
 * JavaScript, HTML, CSS 
 * Charts.js
 
-## Genomförande (steg-för-steg)
+## Genomförande
 
 1. Koppling av sensor och mikrokontroller
 2. Programmering av ESP8266 för datainsamling och MQTT publishing i Arduino IDE

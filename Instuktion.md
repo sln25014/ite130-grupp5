@@ -162,12 +162,14 @@ Skapa dokumenten index.html, style.css och acquisition.js i en mapp i vs code oc
 
 [acquisition.js](https://github.com/sln25014/ite130-grupp5/blob/main/Websida/acquisitions.js)
 
+Denna kod är skapad med hjälp av AI
+
 ### Viktiga delar i koden
 
 ```JS
 const brokerUrl = 'wss://test.mosquitto.org:8081';  // WebSocket-adress till MQTT-broker
 const topic = '/MDU/ITE130/Group5/Moisture';        // Topic där sensorn publicerar data
-const client = mqtt.connect(brokerUrl);              // Skapa MQTT-klient
+const client = mqtt.connect(brokerUrl);             // Skapa MQTT-klient
 ```
 
 Ändra `/MDU/ITE130/Group5/Moisture` till namnet på din topic
