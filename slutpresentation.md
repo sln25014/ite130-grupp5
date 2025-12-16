@@ -52,11 +52,11 @@ Användaren behöver inte tolka rådata – systemet översätter mätvärden ti
 Kurskoppling: UX, informationsvisualisering, designbeslut utifrån användare
 
 
-##  Förväntad kunskap hos användaren
+## Förväntad kunskap hos användaren
 
 Artefakten ger användaren följande kunskap över tid:
 
-* Hur snabbt jorden torkar efter vattning
+* Hur snabbt jorden torkar efter vattning med hjälp av trender
 * Hur ofta en specifik växt behöver vatten
 * Sambandet mellan tid, fuktighet och bevattning
 
@@ -66,13 +66,13 @@ Detta leder till:
 * Mer medveten växtskötsel
 * Lärande genom visualiserad data
 
-Kurskoppling:data → information → kunskap
+Kurskoppling: Data → Information → Kunskap
 
 ## Konstruktion för minskad omgivningspåverkan
 
 För att göra sensorn mindre känslig för yttre påverkan:
 
-* Sensorn placeras stabilt i jorden, inte löst
+* Sensorn placeras stabilt i jorden
 * Elektroniken hålls ovan jord
 * Möjlig enkel kapsling (t.ex.låda) för:
    * skydd mot vatten
@@ -96,7 +96,6 @@ Använda tekniker:
 
 * C++ (NodeMCU programmering)
 * MQTT (publish/subscribe)
-* Node-RED (flödesbaserad programmering)
 * JavaScript, HTML, CSS 
 * Charts.js
 
