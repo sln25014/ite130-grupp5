@@ -60,7 +60,7 @@ Detta leder till:
 * Mer medveten växtskötsel
 * Lärande genom visualiserad data
 
-Kurskoppling: Data → Information → Kunskap
+_Detta kopplas till Data -> Information -> Kunskap genom att data bearbetas till meningsfulla insikter._
 
 ## Konstruktion för minskad omgivningspåverkan
 
