@@ -62,7 +62,7 @@ Detta leder till:
 
 _Detta kopplas till Data -> Information -> Kunskap genom att data bearbetas till meningsfulla insikter._
 
-## Konstruktion för minskad omgivningspåverkan
+## Skydd för komponenterna 
 
 För att göra sensorn mindre känslig för yttre påverkan:
 
