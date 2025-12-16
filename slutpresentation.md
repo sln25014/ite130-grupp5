@@ -28,7 +28,7 @@ Projektet är byggt på med ett plusivo-kit som innehåller följande komponente
 * _Breadboard Power Supply_ - Kopplar batteriet till breadboard. 
 * _Kopplingskablar_ - Används för anslutning mellan sensor och mikrokontroller.
 
-Kurskoppling: mikrokotroller, sensorer, prototypbyggnaden, BOM
+_Kopplas till kursen genom behandling av användningen av mikrokontroller och sensor i byggandet av prototypen, där vi använder BOM för att göra det tydligt om vilka komponenter som ingår._
 
 ## Designanpassning mot användare och kontext 
 
