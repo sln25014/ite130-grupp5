@@ -20,7 +20,7 @@ Detta är ett projekt för att mäta fuktnivån i en krukväxt med en sensor. De
 
 ## Bygga
 
-Sätt fast Mikrokontrollern på breadboarden och anslut den orangea sladden från sensorn till pin A0, röd till 3,3 och svart till GND på mikrokontrollern.
+Sätt fast Mikrokontrollern på breadboarden och anslut den orangea sladden från sensorn till pin A0, röd till 3,3 och svart till GND på mikrokontrollern. Sätt fast Breadboard powersupply, anslut sladdar till 3,3 och GND på mikrokontrollern och koppla in batteriet.
 
 ## Arduino IDE setup och Arduino programmering
 
