@@ -33,8 +33,6 @@ Kurskoppling: mikrokotroller, sensorer, prototypbyggnaden, BOM
 
 ## Designanpassning mot användare och kontext 
 
-Tydligt designanpassning:
-
 Eftersom användaren oftats använder mobiltelefon, har vi 
 * Valt moblianpassad webbdesign
 * Visat information med:
