@@ -43,8 +43,7 @@ Resultat:
 
 Användaren behöver inte tolka rådata – systemet översätter mätvärden till begriplig information.
 
-Kurskoppling: UX, informationsvisualisering, designbeslut utifrån användare
-
+_Genom designbeslut kopplas det till UX då vi utgår från användarens behov. Informationsvisualisering används för att göra det eklare och tydligare för användaren att förstå informationen._
 
 ## Förväntad kunskap hos användaren
 
