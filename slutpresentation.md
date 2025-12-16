@@ -16,7 +16,7 @@ Användare förlitar sig ofta på gissning eller känsla, vilket kan leda till �
 Lösning:
 En IoT-baserad artefakt som mäter jordfuktighet och presenterar informationen visuellt och begripligt i realtid.
 
-_Detta kan kopplas till användarcentrerad design där vi utgår från användarens bettende och behov i deras vardag. Genom kontextanalys kan vi studera användarens situation samt handlingar för att få en bättre förståelse på hur artefakten faktiskt används._
+_Detta kan kopplas till användarcentrerad design där vi utgår från användarens beteende och behov i deras vardag. Genom kontextanalys kan vi studera användarens situation samt handlingar för att få en bättre förståelse på hur artefakten faktiskt används._
 
 ## Sensor och byggnation (BOM- Bill Of Materials) 
 
