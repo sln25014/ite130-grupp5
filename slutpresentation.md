@@ -21,10 +21,10 @@ Kurskoppling: användarcentrerad design, kontextanalys, artefakt i vardagsmiljö
 
 ## Sensor och byggnation (BOM- Bill Of Materials) 
 
-Projektet är byggt på med ett plusivo-kit och följande komponenter:
+Projektet är byggt på med ett plusivo-kit som innehåller följande komponenter:
 
 * _Capacative Soil Moisture Sensor v2.0_ - Den mäter jordens fuktighet genom resistansen. 
-* _NodeMCU ESP8266_ - En mikrokontroller som ansluter sensorn till internet som skickarsenordata via MQTT. 
+* _NodeMCU ESP8266_ - En mikrokontroller som ansluter sensorn till internet som skickar senordata via MQTT. 
 * _9V Batteri med DC Sladd_ - Detta behövs för att hålla igång sensorn och mikrokontrollern.
 * _Breadboard Power Supply_ - Kopplar batteriet till breadboard. 
 * _Kopplingskablar_ - Används för anslutning mellan sensor och mikrokontroller.
@@ -100,7 +100,7 @@ Använda tekniker:
 ## Genomförande (steg-för-steg)
 
 1. Koppling av sensor och mikrokontroller
-2. Programmering av ESP8266 för datainsamling och MQTT publishing
+2. Programmering av ESP8266 för datainsamling och MQTT publishing i Arduino IDE
 3. Utveckling av webgränssnitt med Charts.js, JavaScript, HTML och CSS
 
 ## Slutresultat
