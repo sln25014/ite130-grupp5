@@ -72,7 +72,7 @@ För att göra sensorn mindre känslig för yttre påverkan:
    * skydd mot vatten
    * minskad påverkan från beröring och ljus
 
-Kurskoppling: robust konstruktion, fysisk artefakt
+_Detta kopplas till kursen genom en robust konstruktion för skapandet av fysiska artefakter som tål både belastning och användning över en längre tid. Fokuset hamnar på att designa en hållbar, funktionell och stabil prototyp som tål vardagliga situationer._
 
 ## Kod och systemarkitektur
 
