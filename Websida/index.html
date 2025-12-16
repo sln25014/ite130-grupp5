@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Moist-o-Tron</title>
-    
+
     <!-- Stilar och externa bibliotek -->
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
@@ -14,7 +14,7 @@
 
 <body>
     <div class="container">
-        
+
         <!-- Header med titel och anslutningsstatus -->
         <div class="header">
             <h1>🌱 Moist-o-Tron</h1>
@@ -27,7 +27,7 @@
             <div id="moisture-instruction" class="moisture-instruction">
                 Väntar på data...
             </div>
-            
+
             <!-- Halvmånegauge med procentvärde i mitten -->
             <div class="gauge-container">
                 <canvas id="moisture-gauge"></canvas>
@@ -41,12 +41,12 @@
         <!-- Kort med linjediagram och statistik -->
         <div class="chart-card">
             <h2>📊 Historik för fukt den senaste veckan</h2>
-            
+
             <!-- Container för Chart.js linjediagram -->
             <div class="chart-container">
                 <canvas id="acquisitions"></canvas>
             </div>
-            
+
             <!-- Grid med statistikkort (nuvarande, genomsnitt, max, min) -->
             <div class="stats-grid">
                 <div class="stat-item">
@@ -58,11 +58,11 @@
                     <div id="stat-avg" class="stat-value">--</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">Maximum</div>
+                    <div class="stat-label">Minimum</div>
                     <div id="stat-min" class="stat-value">--</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">Minimum</div>
+                    <div class="stat-label">Maximum</div>
                     <div id="stat-max" class="stat-value">--</div>
                 </div>
             </div>

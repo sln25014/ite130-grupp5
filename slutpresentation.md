@@ -1,16 +1,14 @@
 # Slutredovisning-fuktsensor för jord
 
 ## Användare och kontext 
-Användare:
+
+### Användare:
 
 Privatpersoner som har krukväxter i hemmet och saknar djup kunskap om växters bevattningsbehov. 
 
-Kontext: 
+### Kontext: 
 Användning sker i hemmiljö, ofta i vardagen, via mobiltelefon.
-Användaren vill snabbt få svar på:
-
-* Om växten behöver vatten
-* Hur fuktigt jorden är just nu
+Användaren vill snabbt få svar på om växten behöver vatten
 
 Problem:
 Användare förlitar sig ofta på gissning eller känsla, vilket kan leda till över-eller undervattning.
@@ -44,7 +42,6 @@ Eftersom användaren oftats använder mobiltelefon, har vi
    * Graf (linjediagram)
    * Visuell indikator (gauge)'
 
-Designen använder lugna gröna färger för att associera till natur och växter.
 Resultat:
 
 Användaren behöver inte tolka rådata – systemet översätter mätvärden till begriplig information.
@@ -56,7 +53,8 @@ Kurskoppling: UX, informationsvisualisering, designbeslut utifrån användare
 
 Artefakten ger användaren följande kunskap över tid:
 
-* Hur snabbt jorden torkar efter vattning med hjälp av trender
+* Fuktvärdet i realtid för växten
+* Trender för fuktnivån
 * Hur ofta en specifik växt behöver vatten
 * Sambandet mellan tid, fuktighet och bevattning
 
@@ -84,7 +82,7 @@ Kurskoppling: robust konstruktion, fysisk artefakt
 
 Systemets flöde:
 
-* Fuktsensor mäter värde
+* Fuktsensor mäter fuktnivån
 * ESP8266 lagrar data i variabeln `value` och skickar via en MQTT topic
 * Websida prenumererar på vår topic
 * Data visualiseras med:
@@ -109,6 +107,7 @@ Använda tekniker:
 
 Resultatet är en fungerande IoT-artefakt som:
 * Mäter jordfuktighet i realtid
+* Visar trender för fuktnivån
 * Presenterar data visuellt och begripligt
 * Stödjer användaren i vardagliga beslut
 * Är anpassad för mobil användning

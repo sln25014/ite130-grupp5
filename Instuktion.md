@@ -20,9 +20,7 @@ Detta är ett projekt för att mäta fuktnivån i en krukväxt med en sensor. De
 
 ## Bygga
 
-Koppla ihop sensor och mikrokontroller som följande bild:
-
-BILD PÅ SENSOR
+Sätt fast Mikrokontrollern på breadboarden och anslut den orangea sladden från sensorn till pin A0, röd till 3,3 och svart till GND på mikrokontrollern.
 
 ## Arduino IDE setup och Arduino programmering
 
@@ -148,6 +146,8 @@ void loop() {
 }
 ```
 
+Ändra `/MDU/ITE130/Group5/Moisture` till ett unikt namn för din topic och `"MDU_guest", "Frozen202512"` till ssid och lösenord till ditt WiFi.
+
 Klicka sedan på knappen högst upp med en pil till höger som säger **Upload** och låt den tänka ett litet tag.
 
 Koden för fuktsensorn är nu klar och installerad på mikrokontrollern.
@@ -161,3 +161,13 @@ Skapa dokumenten index.html, style.css och acquisition.js i en mapp i vs code oc
 [style.css](https://github.com/sln25014/ite130-grupp5/blob/main/Websida/style.css)
 
 [acquisition.js](https://github.com/sln25014/ite130-grupp5/blob/main/Websida/acquisitions.js)
+
+### Viktiga delar i koden
+
+```JS
+const brokerUrl = 'wss://test.mosquitto.org:8081';  // WebSocket-adress till MQTT-broker
+const topic = '/MDU/ITE130/Group5/Moisture';        // Topic där sensorn publicerar data
+const client = mqtt.connect(brokerUrl);              // Skapa MQTT-klient
+```
+
+Ändra `/MDU/ITE130/Group5/Moisture` till namnet på din topic
