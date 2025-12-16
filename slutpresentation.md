@@ -117,3 +117,7 @@ Resultatet är en fungerande IoT-artefakt som:
 ### Sensor och kruka
 
 ![sensor och kruka]()
+
+## Instruktioner
+
+[Instruktioner](https://github.com/sln25014/ite130-grupp5/blob/main/Instuktion.md)
