@@ -51,7 +51,7 @@ Artefakten ger användaren följande kunskap över tid:
 
 * Fuktvärdet i realtid för växten
 * Trender för fuktnivån
-* Hur ofta en specifik växt behöver vatten om bestämmd mängd vatten används
+* Hur ofta en specifik växt behöver vatten om bestämd mängd vatten används
 * Sambandet mellan tid, fuktighet och bevattning
 
 Detta leder till:
