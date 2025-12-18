@@ -115,7 +115,9 @@ Resultatet är en fungerande IoT-artefakt som:
 
 ### Sensor och kruka
 
-![sensor och kruka]()
+![växt](/bilder/planta.jpg)
+
+![sensor](/bilder/node.jpg)
 
 ## Instruktioner
 
